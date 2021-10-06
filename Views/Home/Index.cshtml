@@ -1,0 +1,48 @@
+﻿@model cd_c_dojoSurveyWVal.Models.Survey
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form asp-action="CreateSurvey" asp-controller="Home">
+    <div class="form-group">
+        <span asp-validation-for="name"></span>
+        <label asp-for="name"></label>
+        <input asp-for="name" class="form-control">
+
+        <span asp-validation-for="location"></span>
+        <label asp-for="location"></label>
+        <select class="form-control" asp-for="location">
+            <option disabled selected hidden>--Select a Location--</option>
+            <option value="bellevue">Bellevue, WA</option>
+            <option value="boise">Boise, ID</option>
+            <option value="chicago">Chicago, IL</option>
+            <option value="los angeles">Los Angeles, CA</option>
+            <option value="silicon valley">Silicon Valley, CA</option>
+        </select>
+
+        <span asp-validation-for="language"></span>
+        <label asp-for="language"></label>
+        <select class="form-control" asp-for="language">
+            <option disabled selected hidden>--Select a Language--</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="c#">C#</option>
+        </select>
+
+        <span asp-validation-for="comments"></span>
+        <label asp-for="comments"></label>
+        <textarea class="form-control" asp-for="comments"  cols="30" rows="5"></textarea>
+        
+        <input type="submit" class="btn btn-info mt-2">
+
+    </form>
+</body>
+</html>
